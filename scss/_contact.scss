@@ -1,16 +1,32 @@
-// Styling for the contact section
-#contact2 {
-  .wt-block-contactsBg {
-    background-color: $primary-200;
+#contacts {
+  position: relative;
+  background-color: $white;
+  a {
+    text-decoration: none;
+    img {
+      vertical-align: top;
+    }
   }
-  .wt-block-contactsCenter {
-    background-color: #fff;
-    padding: 50px;
-    max-width: 450px;
-    margin: 70px auto;
-  }
-  img {
-    min-height: 552px;
-    object-fit: cover;
+  .block-follow {
+    ul {
+      li {
+        text-align: center;
+        a{
+          display: block;
+          background-color: $blue;
+          border-radius: 8px;
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          color: #fff;
+          &:hover {
+            background: linear-gradient(45deg, #df7165 33%, #f9e377 66%, $orange);
+          }
+          i {
+            font-size: 18px;
+          }
+        }
+      }
+    }
   }
 }

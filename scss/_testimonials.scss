@@ -1,32 +1,25 @@
-// Styling for the testimonials1 section
-#testimonials1 {
-  .wt-block-testimonials {
-    background-color: $primary-100;
-    padding: 40px 30px;
-  }
-}
-
-// Styling for the testimonials2 section
-#testimonials2 {
+#testimonials {
+  position: relative;
+  background-color: $white;
   .owl-carousel {
     .owl-nav {
       display: block !important;
       .owl-prev {
         background-color: transparent;
-        color: $primary;
+        color: $orange;
         padding: 10px;
         border-radius: 0
       }
       .owl-next {
         background-color: transparent;
-        color: $primary;
+        color: $orange;
         padding: 10px;
         border-radius: 0
       }
       i {
         font-size: 30px;
         &hover {
-          color: lighten($primary, 20%);
+          color: lighten($orange, 20%);
         }
       }
     }
@@ -34,26 +27,66 @@
       display: none !important;
     }
   }
-  .wt-block-testimonials {
-    background-color: $primary-100;
-    padding: 40px 30px;
-    .wt-block-testimonials-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: #ccc;
-      margin: 0 auto;
-      padding: 15px;
-      img {
-        display: inline;
-        width: 60px;
-      }
+  .block-testimonials-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $blue;
+    margin: 0 auto;
+    padding: 15px;
+    img {
+      display: inline;
+      width: 60px;
+    }
+  }
+  .block-testimonials {
+    position: relative;
+    top: -50px;
+    z-index: -1;
+    background-color: $blue-100;
+    padding: 60px 30px 40px;
+    .testimonials-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  .bg_2_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/testimonials/back_2_left.png") no-repeat;
+    width: 245px;
+    height: 716px;
+  }
+  .bg_2_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/testimonials/back_2_right.png") no-repeat;
+    width: 245px;
+    height: 716px;
+  }
+}
+@media (max-width: 991px) {
+  section#testimonials {
+    .bg_2_left {
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../img/testimonials/back_2_left.png") center center no-repeat;
+      width: 200px;
+      height: 640px;
+    }
+    .bg_2_right {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 200px;
+      height: 640px;
     }
   }
 }
-
-@media (min-width: 900px) {
-  #testimonials2 .owl-carousel {
+@media (min-width: 1024px) {
+  #testimonials .owl-carousel {
     .owl-nav {
       .owl-prev {
         position: absolute;
@@ -68,6 +101,19 @@
     }
     .owl-dots {
       display: block !important;
+      .owl-dot {
+        span {
+          background: $blue-100;
+        }
+        &.active {
+          span {
+            background: $orange;
+            width: 13px;
+            height: 13px;
+            margin: 4px 7px;
+          }
+        }
+      }
     }
   }
 }

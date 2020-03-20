@@ -1,0 +1,24 @@
+section#faq {
+  background-color: $blue-100;
+  .accordion {
+    .card {
+      background-color: transparent;
+      border: none;
+      margin-bottom: 10px;
+      .card-header {
+        background: linear-gradient(45deg, #df7165 33%, #f9e377 66%, $orange);
+        border-radius: 25px;
+        border-bottom: none;
+        button {
+          float: right;
+          i {
+            color: $blue;
+          }
+        }
+        button[aria-expanded=true] i:before {
+          content: "\f077";
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,38 @@
 // Global styling for this template
+@font-face {
+  font-family: "MuseoSansLight";
+  src: url("../fonts/MuseoSansLight.eot");
+  src: url("../fonts/MuseoSansLight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/MuseoSansLight.woff") format("woff"),
+  url("../fonts/MuseoSansLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MuseoSansRegular";
+  src: url("../fonts/MuseoSansRegular.eot");
+  src: url("../fonts/MuseoSansRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/MuseoSansRegular.woff") format("woff"),
+  url("../fonts/MuseoSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MuseoSansBold";
+  src: url("../fonts/MuseoSansBold.eot");
+  src: url("../fonts/MuseoSansBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/MuseoSansBold.woff") format("woff"),
+  url("../fonts/MuseoSansBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
 body {
   overflow-x: hidden;
-  color: $primary-200;
-  @include merriweather-font;
+  color: $blue;
 }
 body.js-no-scroll {
   height: 100%;
@@ -16,14 +46,24 @@ p {
 }
 
 a {
-  color: $gray-900;
+  color: $blue;
   &:hover {
-    color: lighten($gray-900, 10%);
+    color: lighten($blue, 10%);
   }
 }
+._preloader {
+  display: none;
+  padding-right: 5px;
+}
 
-.wt-text-primary {
-  color: $primary-200 !important;
+.wt-text-white {
+  color: $white !important;
+}
+.wt-text-blue {
+  color: $blue !important;
+}
+.wt-text-orange {
+  color: $orange !important;
 }
 .wt-block-background {
   position: absolute;
@@ -42,25 +82,6 @@ a {
     left: 0;
   }
 }
-.wt-block-follow {
-  ul {
-    li {
-      text-align: center;
-      a{
-        display: block;
-        background-color: $primary-200;
-        border-radius: 4px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        color: #fff;
-        &:hover {
-          background-color: lighten($primary-200, 10%);
-        }
-      }
-    }
-  }
-}
 
 h1,
 h2,
@@ -69,14 +90,13 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  @include merriweather-font;
 }
 
 section {
-  padding: 75px 0;
+  padding: 55px 0;
   h1.wt-section-heroTitle {
-    font-size: 90px;
-    line-height: 1.22;
+    font-size: 70px;
+    line-height: 1;
     font-weight: 400;
     width: 100%;
     -webkit-text-decoration: none;
@@ -95,28 +115,8 @@ section {
     letter-spacing: -.021em;
   }
   p.wt-section-subtitle {
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 400;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: 0;
-  }
-  h3.wt-section-heading {
     font-size: 26px;
-    line-height: 1.31;
-    font-weight: 700;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: 0;
-  }
-  p.wt-section-subheading {
-    font-size: 22px;
-    line-height: 1.36;
+    line-height: 1.5;
     font-weight: 400;
     width: 100%;
     -webkit-text-decoration: none;
@@ -157,7 +157,6 @@ form.wt-form-rounded {
 .btn {
   font-size: 14px;
   line-height: 1.2;
-  @include merriweather-font;
 }
 .wt-btn-size-sm {
   font-size: 12px;
@@ -172,15 +171,17 @@ form.wt-form-rounded {
 }
 
 .wt-btn-primary {
-  background-color: $primary-200;
-  border-color: $primary-200;
-  color: white !important;
+  background: linear-gradient(45deg, #df7165 33%, #f9e377 66%, $orange);
+  border-color: $orange;
+  color: $blue !important;
+  font-weight: 500;
+  transition: background-color 1s ease-in-out;
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($primary-200, 7.5%) !important;
-    border-color: darken($primary-200, 7.5%) !important;
-    color: white !important;
+    background: linear-gradient(45deg, #f9e377 33%, #df7165 66%);
+    border-color: $orange;
+    color: $blue !important;
   }
   &:active,
   &:focus {
@@ -254,23 +255,9 @@ img::-moz-selection {
   section h2.wt-section-title {
     font-size: 26px;
   }
-  section h3.wt-section-heading {
-    font-size: 20px;
-  }
-  section p.wt-section-subheading {
-    font-size: 18px;
-  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
     max-width: 740px;
-  }
-  section {
-    padding: 60px 0;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
   }
 }
