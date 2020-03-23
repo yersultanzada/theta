@@ -30,3 +30,9 @@
     }
   }
 }
+@media (max-width: 575px) {
+  #contacts .m-auto a {
+    display: block;
+    margin-right: 0 !important;
+  }
+}

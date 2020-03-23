@@ -6,12 +6,13 @@ section#faq {
       border: none;
       margin-bottom: 10px;
       .card-header {
+        position: relative;
         background: linear-gradient(45deg, #df7165 33%, #f9e377 66%, $orange);
         border-radius: 25px;
         border-bottom: none;
         button {
           font-size: 1rem;
-          width: 100%;
+          width: 93%;
           text-align: left;
           color: $blue;
           text-decoration: none;
@@ -19,7 +20,10 @@ section#faq {
           vertical-align: top;
           white-space: normal;
           i {
-            float: right;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1.25rem;
             color: $blue;
           }
         }
@@ -28,5 +32,10 @@ section#faq {
         }
       }
     }
+  }
+}
+@media (max-width: 575px){
+  section#faq .accordion .card-body {
+    font-size: 14px;
   }
 }
