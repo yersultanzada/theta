@@ -10,8 +10,16 @@ section#faq {
         border-radius: 25px;
         border-bottom: none;
         button {
-          float: right;
+          font-size: 1rem;
+          width: 100%;
+          text-align: left;
+          color: $blue;
+          text-decoration: none;
+          padding: 0;
+          vertical-align: top;
+          white-space: normal;
           i {
+            float: right;
             color: $blue;
           }
         }

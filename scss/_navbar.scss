@@ -2,9 +2,6 @@
   background-color: transparent;
   padding-top: 15px;
   padding-bottom: 15px;
-  .row {
-    width: 100%;
-  }
   .navbar-brand {
     font-size: 1.5em;
     font-weight: bold;
@@ -53,12 +50,11 @@
 }
 @media(max-width: 410px) {
   #mainNav {
-    .mobile-header {
-      a {
-        display: block !important;
-        text-align: center;
-        float: none;
-      }
+    .row {
+      margin: 0;
+    }
+    .navbar-brand {
+      font-size: 1.3rem;
     }
   }
 }

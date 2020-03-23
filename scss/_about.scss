@@ -86,8 +86,13 @@ section#author{
         padding-bottom: 1px;
       }
     }
-    .main-info img {
-      max-width: 350px;
+    .main-info {
+      img {
+        max-width: 350px;
+      }
+      .author-img--ellipse {
+        right: 0 !important;
+      }
     }
   }
 }

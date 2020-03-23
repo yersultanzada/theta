@@ -289,10 +289,6 @@ img::-moz-selection {
   padding-bottom: 15px;
 }
 
-#mainNav .row {
-  width: 100%;
-}
-
 #mainNav .navbar-brand {
   font-size: 1.5em;
   font-weight: bold;
@@ -343,10 +339,11 @@ img::-moz-selection {
 }
 
 @media (max-width: 410px) {
-  #mainNav .mobile-header a {
-    display: block !important;
-    text-align: center;
-    float: none;
+  #mainNav .row {
+    margin: 0;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.3rem;
   }
 }
 
@@ -591,6 +588,9 @@ section#author .main-info .author-img--ellipse {
   }
   section#author .main-info img {
     max-width: 350px;
+  }
+  section#author .main-info .author-img--ellipse {
+    right: 0 !important;
   }
 }
 
@@ -857,10 +857,18 @@ section#faq .accordion .card .card-header {
 }
 
 section#faq .accordion .card .card-header button {
-  float: right;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  color: #111147;
+  text-decoration: none;
+  padding: 0;
+  vertical-align: top;
+  white-space: normal;
 }
 
 section#faq .accordion .card .card-header button i {
+  float: right;
   color: #111147;
 }
 
