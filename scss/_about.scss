@@ -26,6 +26,23 @@ section#about {
 }
 section#author{
   padding-top: 0;
+  .owl-dots {
+    display: block !important;
+    margin-top: 15px;
+    .owl-dot {
+      span {
+        background: $blue-100;
+      }
+      &.active {
+        span {
+          background: $orange;
+          width: 13px;
+          height: 13px;
+          margin: 4px 7px;
+        }
+      }
+    }
+  }
   .col {
     padding-left: 0;
     padding-right: 1px;

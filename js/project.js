@@ -34,6 +34,54 @@
     offset: 56
   });
 
+  $('#testimonials-carousel').owlCarousel({
+    items: 3,
+    loop:true,
+    margin:10,
+    dots: true,
+    autoplay:false,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:true,
+    navText: [
+      "<i class=\"fas fa-chevron-left\"></i>",
+      "<i class=\"fas fa-chevron-right\"></i>"
+    ],
+    responsive:{
+      0:{
+        items:1
+      },
+      768:{
+        items:2
+      },
+      1000:{
+        items:3
+      }
+    }
+  });
+
+  $('#cert-carousel').owlCarousel({
+    items: 5,
+    loop:true,
+    margin:1,
+    dots: true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:false,
+    responsive:{
+      0:{
+        items:2
+      },
+      768:{
+        items:3
+      },
+      1000:{
+        items:5
+      }
+    }
+  });
+
 
 
 })(jQuery); // End of use strict

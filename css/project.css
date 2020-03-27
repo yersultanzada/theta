@@ -523,6 +523,22 @@ section#author {
   padding-top: 0;
 }
 
+section#author .owl-dots {
+  display: block !important;
+  margin-top: 15px;
+}
+
+section#author .owl-dots .owl-dot span {
+  background: #e9eaf4;
+}
+
+section#author .owl-dots .owl-dot.active span {
+  background: #ffba6b;
+  width: 13px;
+  height: 13px;
+  margin: 4px 7px;
+}
+
 section#author .col {
   padding-left: 0;
   padding-right: 1px;
